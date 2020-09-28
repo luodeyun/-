@@ -1,32 +1,41 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+  <div class="main">
+    <div class="back-img">
+      <!-- <img
+        src="./assets/img/bg/bg.jpg"
+        alt="404"
+        style="width: 100%; filter: blur(80px)"
+      /> -->
     </div>
-    <router-view/>
+
+    <div id="app">
+      <TopBar></TopBar>
+    </div>
   </div>
 </template>
-
-<style lang="less">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<script>
+import TopBar from "./components/topbar/TopBar.vue";
+export default {
+  name: "APP",
+  components: {
+    TopBar,
+  },
+};
+</script>
+<style lang="less" scope>
+.back-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
 }
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+.main {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.back-img img {
+  width: 100%;
 }
 </style>
