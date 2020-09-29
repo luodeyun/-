@@ -10,15 +10,18 @@
 
     <div id="app">
       <TopBar></TopBar>
+      <CenterAll class="center-m"></CenterAll>
     </div>
   </div>
 </template>
 <script>
 import TopBar from "./components/topbar/TopBar.vue";
+import CenterAll from "./views/center/centerAll";
 export default {
   name: "APP",
   components: {
     TopBar,
+    CenterAll,
   },
 };
 </script>
@@ -35,7 +38,11 @@ export default {
   height: 100vh;
   overflow: hidden;
 }
-.back-img img {
-  width: 100%;
+
+#app {
+  width: 1400px;
+  margin: 0 auto;
+
+  overflow: hidden;
 }
 </style>

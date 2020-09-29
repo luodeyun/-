@@ -4,7 +4,7 @@
       <a href="#">
         <img src="../../assets/img/common/logo.png" alt="404" />
       </a>
-      <el-button type="text" class="bu">登录</el-button>
+      <el-button type="text" class="bu" style="color: #fff">登录</el-button>
     </div>
     <div class="center">
       <slot name="center">
@@ -36,7 +36,32 @@
         </div>
       </slot>
     </div>
-    <div class="right">aa</div>
+    <div class="right">
+      <slot name="right">
+        <a href>回到旧版</a>
+        <a href>
+          <i class="el-icon-monitor"></i>
+        </a>
+        <a href>
+          <i class="el-icon-mobile-phone"></i>
+        </a>
+        <a href>
+          <i class="el-icon-menu"></i>
+        </a>
+        <a href>
+          <i class="el-icon-s-opportunity"></i>
+        </a>
+        <a href>
+          <i class="el-icon-setting"></i>
+        </a>
+        <a href>
+          <i class="el-icon-bell"></i>
+        </a>
+        <a href>
+          <i class="el-icon-close"></i>
+        </a>
+      </slot>
+    </div>
   </div>
 </template>
 <script>
@@ -58,8 +83,8 @@ input.el-input__inner {
 </style>
 <style scoped>
 #topbar {
-  height: 100px;
-  background-color: aqua;
+  height: 60px;
+  background-color: #5292fe;
   padding: 10px;
   position: relative;
   color: #fff;
@@ -67,6 +92,7 @@ input.el-input__inner {
   justify-content: space-between;
 }
 .left {
+  /* float: left; */
   margin-left: 20px;
   margin-top: 10px;
 }
@@ -82,16 +108,44 @@ input.el-input__inner {
   vertical-align: middle;
   margin-right: 5px;
 }
-.left .bu {
-  margin-top: 10px;
-}
 .center {
   color: #fff;
+  /* position: absolute;
+  left: 330px;
+  top: 15px; */
+  margin-top: 4px;
   display: flex;
   justify-content: space-around;
+}
+.center a i {
+  font-size: 20px;
+  margin-left: 15px;
+  margin-top: 12px;
+  color: rgba(255, 255, 255, 0.8);
+}
+.center a i:hover {
+  color: rgba(255, 255, 255, 0.8);
 }
 .inputSq {
   width: 360px;
   margin-left: 15px;
+  margin-top: 12px;
+}
+.right {
+  /* float: right; */
+  margin-top: 18px;
+}
+.right a {
+  color: rgba(255, 255, 255, 0.8);
+  margin-right: 15px;
+  text-decoration: none;
+  font-size: 13px;
+}
+.right a:last-child {
+  margin-right: 200px;
+  font-size: 19px;
+}
+.right a:hover {
+  color: #fff;
 }
 </style>
