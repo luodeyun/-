@@ -37,6 +37,6 @@ export default {
   width: 100%;
   display: flex;
   flex-direction: column;
-  max-height: 600px;
+  max-height: 680px;
 }
 </style>
