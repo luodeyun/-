@@ -39,4 +39,12 @@ export default {
   flex-direction: column;
   max-height: 680px;
 }
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 255, 0.1);
+  border-radius: 3px;
+}
 </style>

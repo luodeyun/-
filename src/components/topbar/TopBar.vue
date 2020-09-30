@@ -83,7 +83,7 @@ input.el-input__inner {
 </style>
 <style scoped>
 #topbar {
-  height: 60px;
+  height: 40px;
   background-color: #5292fe;
   padding: 10px;
   position: relative;
@@ -93,8 +93,8 @@ input.el-input__inner {
 }
 .left {
   /* float: left; */
-  margin-left: 20px;
-  margin-top: 10px;
+  margin-left: 10px;
+  margin-top: -10px;
 }
 .left a > img {
   width: 36px;
@@ -105,8 +105,11 @@ input.el-input__inner {
   font-size: 14px;
   color: white;
   text-decoration: none;
-  vertical-align: middle;
+  vertical-align: bottom;
   margin-right: 5px;
+}
+.bu {
+  margin-top: 10px;
 }
 .center {
   color: #fff;
@@ -120,7 +123,7 @@ input.el-input__inner {
 .center a i {
   font-size: 20px;
   margin-left: 15px;
-  margin-top: 12px;
+  margin-top: 5px;
   color: rgba(255, 255, 255, 0.8);
 }
 .center a i:hover {
@@ -129,11 +132,11 @@ input.el-input__inner {
 .inputSq {
   width: 360px;
   margin-left: 15px;
-  margin-top: 12px;
+  margin-top: 4px;
 }
 .right {
   /* float: right; */
-  margin-top: 18px;
+  margin-top: 10px;
 }
 .right a {
   color: rgba(255, 255, 255, 0.8);
