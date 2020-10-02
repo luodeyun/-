@@ -30,7 +30,7 @@ export default {
     //获取十条数据来展示
     getMusicList() {
       getMusicList().then((res) => {
-        this.musiclist = res.data.playlists.slice(0, 10);
+        this.musiclist = res.playlists.slice(0, 10);
       });
     },
   },

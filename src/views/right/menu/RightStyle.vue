@@ -3,19 +3,22 @@
     <Swiper />
     <MusicList />
     <OnlyOne></OnlyOne>
-    <div class="sss">s</div>
+    <NewMusic></NewMusic>
+    <div class="sss"></div>
   </div>
 </template>
 <script>
 import Swiper from "@/components/swiper/Swiper";
 import MusicList from "@/components/musiclist/MusicList.vue";
 import OnlyOne from "@/components/onlyone/OnlyOne.vue";
+import NewMusic from "@/components/newmusic/NewMusic";
 export default {
   name: "RightStyle",
   components: {
     Swiper,
     MusicList,
     OnlyOne,
+    NewMusic,
   },
 };
 </script>
@@ -26,7 +29,7 @@ export default {
   overflow: auto;
 }
 .sss {
-  height: 50px;
+  height: 100px;
   width: 100%;
 }
 </style>

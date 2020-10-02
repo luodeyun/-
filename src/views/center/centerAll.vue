@@ -29,12 +29,13 @@ export default {
 .ct-container {
   position: relative;
   width: 100%;
-  height: 600px;
+  height: 625px;
   border: 1px solid #eee;
 }
 .con-all {
   position: relative;
   width: 100%;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   max-height: 680px;

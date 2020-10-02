@@ -20,8 +20,8 @@ export default {
   methods: {
     getSwiper() {
       getSwiper().then((res) => {
-        this.swipers = res.data.banners;
-        console.log(res.data);
+        this.swipers = res.banners;
+        console.log(res);
       });
     },
   },

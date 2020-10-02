@@ -1,31 +1,52 @@
 <template>
   <div class="main">
     <div class="back-img">
-      <!-- <img
+      <img
         src="./assets/img/bg/bg.jpg"
         alt="404"
         style="width: 100%; filter: blur(80px)"
-      /> -->
+      />
     </div>
 
     <div id="app">
       <TopBar></TopBar>
       <CenterAll class="center-m"></CenterAll>
+      <BottomBar class="btm-b"></BottomBar>
     </div>
   </div>
 </template>
 <script>
 import TopBar from "./components/topbar/TopBar.vue";
 import CenterAll from "./views/center/centerAll";
+import BottomBar from "./components/bottombar/BottomBar";
 export default {
   name: "APP",
   components: {
     TopBar,
     CenterAll,
+    BottomBar,
   },
 };
 </script>
 <style lang="less" scope>
+.center-m {
+  position: relative;
+}
+.btm-b {
+  position: relative;
+}
+#app {
+  width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  background: #fff;
+}
+.back-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
 .back-img {
   position: absolute;
   top: 0;
@@ -38,11 +59,9 @@ export default {
   height: 100vh;
   overflow: hidden;
 }
-
 #app {
   width: 1400px;
   margin: 0 auto;
-
   overflow: hidden;
 }
 </style>

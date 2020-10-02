@@ -13,6 +13,11 @@ export function getMusicList() {
     }
   });
 }
+export function getOnlyList() {
+  return request({
+    url: "/personalized/privatecontent"
+  });
+}
 export function getNewList() {
   return request({
     url: "personalized/newsong"
