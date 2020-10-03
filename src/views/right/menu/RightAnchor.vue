@@ -1,9 +1,9 @@
 <template>
-  <div>newsing</div>
+  <div>电台</div>
 </template>
 <script>
 export default {
-  name: "RightNewsing",
+  name: "RightAnchor",
 };
 </script>
 <style scoped>

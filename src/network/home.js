@@ -23,3 +23,19 @@ export function getNewList() {
     url: "personalized/newsong"
   });
 }
+export function getMusicUrl(musicId) {
+  return request({
+    url: "song/url",
+    params: {
+      id: musicId
+    }
+  });
+}
+export function getMusicMenu(musicId) {
+  return request({
+    url: "song/detail",
+    params: {
+      ids: musicId
+    }
+  });
+}

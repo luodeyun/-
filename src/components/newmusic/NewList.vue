@@ -140,7 +140,6 @@ export default {
     //获取最新音乐
     getNewList() {
       getNewList().then((res) => {
-        console.log(res.result, "1");
         this.newMusicList = res.result;
       });
     },

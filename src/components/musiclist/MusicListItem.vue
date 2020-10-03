@@ -1,5 +1,9 @@
 <template>
-  <div class="musiclistitem" :style="{ width: wth + '%' }">
+  <div
+    class="musiclistitem"
+    :style="{ width: wth + '%' }"
+    @click="toListPage(item.id)"
+  >
     <el-card :body-style="{ padding: '0px', width: '100%' }" shadow="hover">
       <!-- item是父亲请求过来的图片 -->
       <img
@@ -70,6 +74,17 @@ export default {
     mvType: {
       type: Boolean,
       default: false,
+    },
+  },
+  methods: {
+    // 因为视频也用了该组件 所以需要判断
+    toListPage(id) {
+      if (this.mvType) {
+        this.$router.push("/mvvideo" + id);
+        return;
+      }
+      this.$router.push("/songs" + id);
+      console.log("/songs" + id);
     },
   },
 };
