@@ -26,6 +26,15 @@ export default {
       type: Boolean,
       default: true,
     },
+    path: {
+      type: String,
+      default: "/home/rtsongs",
+    },
+    methods: {
+      toggel() {
+        this.$router.push(this.path);
+      },
+    },
     more: {
       type: String,
       default: "更多",

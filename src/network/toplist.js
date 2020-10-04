@@ -1,12 +1,12 @@
-import {request} from './request'
+import { request } from "./request";
 
-export function getTopList(){
-    return request({
-        url:"/toplist",
-    })
+export function getTopList() {
+  return request({
+    url: "/toplist"
+  });
 }
-export function getTopListDetial(){
-    return request({
-        url:"toplist/detail",
-    })
+export function getTopListDetial() {
+  return request({
+    url: "toplist/detail"
+  });
 }

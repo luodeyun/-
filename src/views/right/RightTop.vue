@@ -45,7 +45,7 @@ export default {
   methods: {
     handleClick(tab, event, name) {
       console.log(tab, event);
-      console.log(this.$router.replace(tab.name));
+      this.$router.replace(tab.name);
       this.activeName = tab.name;
     },
     // handel(){
@@ -83,4 +83,4 @@ export default {
   display: flex;
   justify-content: center;
 }
-</style>.
+</style>

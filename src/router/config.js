@@ -8,11 +8,13 @@ export default {
       path: "/home",
       name: "home",
       component: () => import("@/views/Home/Home"),
+      meta: { index: 7 },
       children: [
         {
           path: "rtstyle",
           name: "style",
-          component: () => import("@/views/right/menu/RightStyle")
+          component: () => import("@/views/right/menu/RightStyle"),
+          meta: { index: 7 }
         },
         {
           path: "rtsongs",

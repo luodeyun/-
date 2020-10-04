@@ -39,3 +39,19 @@ export function getMusicMenu(musicId) {
     }
   });
 }
+export function getSongListInfo(songsid) {
+  return request({
+    url: "playlist/detail",
+    params: {
+      id: songsid
+    }
+  });
+}
+export function getSongListInfoSongs(songsid) {
+  return request({
+    url: "song/detail",
+    params: {
+      ids: songsid
+    }
+  });
+}

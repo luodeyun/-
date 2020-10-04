@@ -55,6 +55,7 @@ export default {
       getMusicUrl(id).then((res) => {
         // console.log(res.data[0]);
         //歌曲播放的路径
+        console.log(res.data[0].url);
         this.musicUrl = res.data[0].url;
         this.$store.commit(NOW_MUSIC, this.musicUrl);
         // console.log(this.musicUrl);
@@ -62,7 +63,7 @@ export default {
     },
     getMusicMenu(id) {
       getMusicMenu(id).then((res) => {
-        // console.log(res);
+        console.log(res.songs[0]);
         this.musicMenu = res.songs[0];
         this.$store.commit(NOW_MUSICMENU, this.musicMenu);
         // console.log(this.musicMenu);  //获取歌曲的名字和一些信息
