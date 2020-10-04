@@ -1,5 +1,5 @@
 <template>
-  <div>newsing</div>
+  <div>newsss ing</div>
 </template>
 <script>
 export default {
