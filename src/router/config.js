@@ -71,6 +71,24 @@ export default {
       name: "anchorList",
       component: () => import("@/components/anchorlist/AnchorListMenu"),
       meta: { index: 2 }
+    },
+    {
+      path: "/musicvideo",
+      name: "musicVideo",
+      component: () => import("@/components/musicvideo/MusicVideo"),
+      meta: { index: 4 }
+    },
+    {
+      path: "/videos:id",
+      name: "videos",
+      component: () => import("@/components/musicvideo/VideoDetail"),
+      meta: { index: 2 }
+    },
+    {
+      path: "/search:keywords",
+      name: "search",
+      component: () => import("@/components/search/SearchMain"),
+      meta: { index: 2 }
     }
   ],
   mode: "history"

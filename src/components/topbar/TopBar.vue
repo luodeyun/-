@@ -26,6 +26,7 @@
             v-model="input"
             clearable
             suffix-icon="el-icon-search"
+            @keyup.enter.native="togSearch"
           >
           </el-input>
         </div>
@@ -65,6 +66,7 @@
   </div>
 </template>
 <script>
+import { USER_SONGLIST } from "@/store/mutationType";
 export default {
   name: "TopBar",
   data() {
@@ -75,6 +77,9 @@ export default {
   methods: {
     togBack() {
       this.$router.back();
+    },
+    togSearch() {
+      this.$router.push("/search" + this.input);
     },
   },
 };

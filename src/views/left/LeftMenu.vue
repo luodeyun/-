@@ -6,7 +6,7 @@
           <span>推荐</span>
         </template>
         <el-menu-item-group>
-          <el-menu-item index="1-1">
+          <el-menu-item index="1-1" @click="findMusic">
             <i class="el-icon-magic-stick"></i>发现音乐</el-menu-item
           >
           <el-menu-item index="1-2">
@@ -15,7 +15,7 @@
           <el-menu-item index="1-3">
             <i class="el-icon-video-camera-solid"></i>LOOK直播</el-menu-item
           >
-          <el-menu-item index="1-4">
+          <el-menu-item index="1-4" @click="togMusicvideo">
             <i class="el-icon-video-camera"></i>视频</el-menu-item
           >
           <el-menu-item index="1-5">
@@ -59,6 +59,14 @@
 <script>
 export default {
   name: "LeftMenu",
+  methods: {
+    togMusicvideo() {
+      this.$router.push("/musicvideo");
+    },
+    findMusic() {
+      this.$router.push("/home/rtstyle");
+    },
+  },
 };
 </script>
 <style scoped>
