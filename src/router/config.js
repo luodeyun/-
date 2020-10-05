@@ -65,6 +65,12 @@ export default {
       name: "singerlist",
       component: () => import("@/components/singerlist/SingerMenu"),
       meta: { index: 2 }
+    },
+    {
+      path: "/listAnchor:id",
+      name: "anchorList",
+      component: () => import("@/components/anchorlist/AnchorListMenu"),
+      meta: { index: 2 }
     }
   ],
   mode: "history"
