@@ -1,7 +1,25 @@
 import { request } from "./request";
+
 export function getSwiper() {
   return request({
     url: "/banner"
+  });
+}
+
+export function getMusicUrl(musicId) {
+  return request({
+    url: "song/url",
+    params: {
+      id: musicId
+    }
+  });
+}
+export function getMusicMenu(musicId) {
+  return request({
+    url: "song/detail",
+    params: {
+      ids: musicId
+    }
   });
 }
 export function getMusicList() {
@@ -23,22 +41,6 @@ export function getNewList() {
     url: "personalized/newsong"
   });
 }
-export function getMusicUrl(musicId) {
-  return request({
-    url: "song/url",
-    params: {
-      id: musicId
-    }
-  });
-}
-export function getMusicMenu(musicId) {
-  return request({
-    url: "song/detail",
-    params: {
-      ids: musicId
-    }
-  });
-}
 export function getSongListInfo(songsid) {
   return request({
     url: "playlist/detail",
@@ -52,6 +54,48 @@ export function getSongListInfoSongs(songsid) {
     url: "song/detail",
     params: {
       ids: songsid
+    }
+  });
+}
+export function getSongListCollect(songsid) {
+  return request({
+    url: "playlist/subscribers",
+    params: {
+      id: songsid
+    }
+  });
+}
+export function getSongListComment(songsid) {
+  return request({
+    url: "comment/playlist",
+    params: {
+      id: songsid
+    }
+  });
+}
+export function getSongLyric(id) {
+  return request({
+    url: "/lyric",
+    params: {
+      id
+    }
+  });
+}
+export function getSongSimi(id) {
+  return request({
+    url: "/simi/song",
+    params: {
+      id
+    }
+  });
+}
+export function getSongLyricComment(id, limit = 20, offset = 0) {
+  return request({
+    url: "/comment/music",
+    params: {
+      id,
+      limit,
+      offset
     }
   });
 }

@@ -1,6 +1,11 @@
 <template>
   <div class="titleIcon">
-    <div class="tt-item" v-for="(item, index) in cateList" :key="index">
+    <div
+      class="tt-item"
+      v-for="(item, index) in cateList"
+      :key="index"
+      @click="handel(item.id)"
+    >
       <div class="img">
         <img :src="item.picIPadUrl" alt="404" />
       </div>
@@ -23,6 +28,11 @@ export default {
         // console.log(res.categories, "1");
         this.cateList = res.categories.splice(0, 5);
       });
+    },
+    //点击跳转
+    handel(id) {
+      // console.log(id);
+      this.$router.push("/anchor" + id);
     },
   },
   created() {

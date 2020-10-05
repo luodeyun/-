@@ -84,7 +84,6 @@ export default {
         return;
       }
       this.$router.push("/songs" + id);
-      console.log("/songs" + id);
     },
   },
 };

@@ -47,6 +47,24 @@ export default {
           meta: { index: 12 }
         }
       ]
+    },
+    {
+      path: "/songs:id",
+      name: "songslist",
+      component: () => import("@/components/songlist/SongList"),
+      meta: { index: 2 }
+    },
+    {
+      path: "/anchor:id",
+      name: "anchorlist",
+      component: () => import("@/components/anchor/AnchorList"),
+      meta: { index: 2 }
+    },
+    {
+      path: "/singer:id",
+      name: "singerlist",
+      component: () => import("@/components/singerlist/SingerMenu"),
+      meta: { index: 2 }
     }
   ],
   mode: "history"

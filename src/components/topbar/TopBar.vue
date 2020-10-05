@@ -9,7 +9,7 @@
     <div class="center">
       <slot name="center">
         <div>
-          <a href="#">
+          <a href="javascript:void(0)" @click.stop="togBack">
             <i class="el-icon-arrow-left"></i>
           </a>
         </div>
@@ -71,6 +71,11 @@ export default {
     return {
       input: "",
     };
+  },
+  methods: {
+    togBack() {
+      this.$router.back();
+    },
   },
 };
 </script>
